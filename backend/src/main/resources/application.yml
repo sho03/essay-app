@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: backend
+  datasource:
+    url: jdbc:mysql://localhost:3308/essay?useSSL=false&serverTimezone=UTC
+    username: user
+    password: password
