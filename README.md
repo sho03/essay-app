@@ -6,6 +6,8 @@
 cd $APP_HOME
 docker compose up -d
 
+export OPEN_AI_API_KEY=<your open ai api key>
+
 cd backend
 ./gradlew bootrun
 ```

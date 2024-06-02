@@ -5,3 +5,10 @@ spring:
     url: jdbc:mysql://localhost:3308/essay?useSSL=false&serverTimezone=UTC
     username: user
     password: password
+
+openai:
+  apiKey: ${OPEN_AI_API_KEY:apikey}
+  apiUrl: https://api.openai.com/v1/chat/completions
+  model: gpt-3.5-turbo
+  maxTokens: 100
+  prompt: "You are English teacher. You will be get a essay from student. You need to give feedback to student. The essay is:"
