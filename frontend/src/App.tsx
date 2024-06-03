@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { TextArea } from './components/input/TextArea';
+import { Header } from './components/header/Header';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <h1>My Essay App</h1>
       <TextArea value={text} onChange={handleChange}/>
       <div>word count: {wordCount}/300</div>
