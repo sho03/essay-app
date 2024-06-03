@@ -1,5 +1,6 @@
 package sho03.essay.backend.controller
 
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -15,12 +16,16 @@ class EssayController(
     @PostMapping("/proofreading")
     fun proofreading(
         @RequestBody request: ProofreadingRequest
-    ): String {
+    ): ResponseEntity<Response> {
         val result = essayService.proofreading(request.text)
-        return result
+        return ResponseEntity.ok(Response(result))
     }
 
     data class ProofreadingRequest(
         val text: String
+    )
+    
+    data class Response(
+        val result: String
     )
 }
