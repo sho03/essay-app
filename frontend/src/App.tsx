@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { TextArea } from './components/input/TextArea';
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
   return (
     <>
       <h1>My Essay App</h1>
-      <textarea value={text} onChange={handleChange}/>
+      <TextArea value={text} onChange={handleChange}/>
       <div>word count: {wordCount}/300</div>
       <button onClick={onClick} disabled={disabled}>添削する</button>
       <div>{result}</div>
