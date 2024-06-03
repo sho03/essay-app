@@ -1,0 +1,21 @@
+.button {
+  border-radius: 8px;
+  border: 1px solid blue;
+  color: white;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: rgba(0, 123, 255, 1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 123, 255, 1);
+  }
+
+  &:disabled {
+    background-color: rgba(0, 123, 255, 0.4);
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+}
+

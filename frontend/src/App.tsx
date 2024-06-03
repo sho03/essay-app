@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { TextArea } from './components/input/TextArea';
 import { Header } from './components/header/Header';
+import { Button } from './components/buttons/Button';
 
 function App() {
 
@@ -51,7 +52,7 @@ function App() {
       <h1>My Essay App</h1>
       <TextArea value={text} onChange={handleChange}/>
       <div>word count: {wordCount}/300</div>
-      <button onClick={onClick} disabled={disabled}>添削する</button>
+      <Button text={"添削する"} onClick={onClick} disabled={disabled}/>
       <div>{result}</div>
     </>
   )
